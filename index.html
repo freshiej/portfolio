@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jon Freshwater runs the business behind great creative, and builds the AI that makes it run faster. Work for CoreWeave, Jordan Brand, Sun Day Red, IBM, PagerDuty and more.">
+<meta property="og:title" content="Jon Freshwater">
+<meta property="og:description" content="Jon Freshwater runs the business behind great creative, and builds the AI that makes it run faster. Work for CoreWeave, Jordan Brand, Sun Day Red, IBM, PagerDuty and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jonfreshwater.com/">
+<meta property="og:image" content="https://jonfreshwater.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://jonfreshwater.com/">
+<title>Jon Freshwater</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: monochrome gallery portfolio. Thin oversized display type, B&W portrait, pill tags, image rails, two dark bands. Single light look by choice. */
+:root{
+  --ink:#222222;
+  --grey:#7B7B7B;
+  --soft:#F8F8F8;
+  --white:#FFFFFF;
+  --line:#E4E4E4;
+  --ph:#E9E9E9;
+  --hero:#131313;
+  --hero-line:#2A2A2A;
+  --hero-muted:#9A9A9A;
+  --sans:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono:"Geist Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,48px);padding-block:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--ink)}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink)}
+.muted{color:var(--grey)}
+.pill{display:inline-block;font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:99px;color:var(--ink);white-space:nowrap;background:var(--white)}
+.pill.dark{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.arrow-link{font-size:13px;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* image placeholder */
+.ph{background:linear-gradient(135deg,#EDEDED,#DCDCDC);display:grid;place-items:center;position:relative;overflow:hidden;max-width:100%}
+.ph span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);text-align:center;padding:12px}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px;flex-wrap:wrap}
+.nav .left{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+.logo{font-weight:600;font-size:15px;letter-spacing:-.02em;border:1.5px solid var(--ink);border-radius:50%;width:38px;height:38px;display:grid;place-items:center;text-decoration:none}
+.nav nav{display:flex;gap:26px;flex-wrap:wrap}
+.nav nav a{font-size:13px;text-decoration:none}
+.nav nav a:hover{color:var(--grey)}
+
+/* hero */
+.hero{background:var(--hero);color:var(--white);border-radius:20px;display:grid;grid-template-columns:44px minmax(0,1fr);min-height:560px;overflow:hidden}
+.rail{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding-block:32px;border-right:1px solid var(--hero-line)}
+.rail span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;color:var(--hero-muted);letter-spacing:.04em}
+.rail i{flex:1;width:1px;background:var(--hero-line);margin-block:16px}
+.hero-copy{padding:40px clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-width:0}
+.stats{display:flex;gap:44px;flex-wrap:wrap}
+.stat .n{font-size:34px;font-weight:300;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat .n sup{font-size:.45em;vertical-align:1.1em;margin-right:2px}
+.stat .n sup:last-child{margin:0 0 0 2px}
+.stat .l{font-size:12px;color:var(--hero-muted);margin-top:6px}
+.hi{font-size:14px;color:var(--hero-muted);margin-bottom:22px}
+.hi b{color:var(--white);font-weight:500}
+.thesis{font-size:clamp(42px,7vw,104px);font-weight:200;line-height:1;letter-spacing:-.045em;max-width:20ch}
+.thesis em{font-style:normal;font-weight:400;color:var(--white)}
+.thesis span{color:#8A8A8A}
+.intro{font-size:15px;max-width:40ch;margin-top:18px;color:#D6D6D6}
+.intro b{color:var(--white)}
+.intro b{font-weight:500}
+.scroll{font-size:13px}
+.portrait{min-height:420px;height:100%;position:relative;overflow:hidden}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
+@media (max-width:860px){.portrait{min-height:0;aspect-ratio:4/5}}
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .rail{display:none}
+  .portrait{min-height:380px;order:-1}
+}
+
+/* sections */
+section{padding-block:clamp(72px,9vw,120px) 0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:40px}
+.head h2{font-size:clamp(32px,4vw,48px);line-height:1.08;margin-top:10px}
+.head p{font-size:14px;color:var(--grey);max-width:48ch;justify-self:end}
+@media (max-width:760px){.head{grid-template-columns:1fr}.head p{justify-self:start}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) minmax(0,1fr);gap:28px;align-items:start}
+.about h2{font-size:clamp(28px,3vw,36px);margin-bottom:14px}
+.about .body{font-size:15px;color:var(--grey);max-width:42ch}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:10px}
+.card .big{font-size:48px;font-weight:300;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.card p{font-size:13px;color:var(--grey)}
+.points{display:grid;gap:22px}
+.point{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;font-size:14px;color:var(--grey)}
+.point b{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-items:center;font-weight:400;font-size:15px}
+.point strong{color:var(--ink);font-weight:500}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* work gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px;row-gap:0}
+.proj{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:14px;align-content:start;min-width:0;margin-bottom:44px}
+.proj > *{align-self:start}
+.proj .ph{aspect-ratio:4/5;border-radius:14px;text-decoration:none}
+.proj .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.proj .credit{font-size:11px;color:var(--grey)}
+.proj .ph .go{position:absolute;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-items:center;font-size:18px;opacity:0;transform:scale(.9)}
+.proj:hover .ph .go{opacity:1;transform:scale(1)}
+.proj h3{font-size:19px;letter-spacing:-.01em;line-height:1.25}
+.proj .meta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.proj .who{font-size:12px;color:var(--grey)}
+.proj p{font-size:14px;color:var(--grey)}
+.proj .role{font-size:13px;color:var(--ink);border-top:1px solid var(--line);padding-top:10px}
+@media (prefers-reduced-motion:no-preference){.proj .ph .go{transition:opacity .25s,transform .25s}}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.gallery{grid-template-columns:1fr}}
+
+/* experience */
+.exp{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) auto;gap:28px;padding-block:24px;border-bottom:1px solid var(--line);align-items:start}
+.row h3{font-size:18px;letter-spacing:-.01em}
+.row .date{font-size:12px;color:var(--grey);margin-top:4px;font-variant-numeric:tabular-nums}
+.row p{font-size:14px;color:var(--grey)}
+.row .tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:10px}.row .tags{justify-content:flex-start}}
+
+/* dark tools band */
+.band{background:var(--ink);color:var(--white);border-radius:20px;padding:clamp(28px,5vw,64px);display:grid;gap:40px}
+.band .eyebrow{color:var(--white)}
+.band .eyebrow::before{background:var(--white)}
+.band h2{font-size:clamp(32px,4.4vw,56px);line-height:1.05;max-width:18ch;margin-top:10px}
+.band .sub{color:#B5B5B5;font-size:15px;max-width:52ch}
+.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#3A3A3A;border-radius:14px;overflow:hidden}
+.tool{background:var(--ink);padding:26px;display:grid;gap:12px;align-content:start;min-width:0}
+.tool h3{font-size:20px}
+.tool p{font-size:14px;color:#B5B5B5}
+.delta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:13px;margin-top:4px;font-variant-numeric:tabular-nums}
+.delta .was{color:#8E8E8E;text-decoration:line-through;text-decoration-thickness:1px}
+.delta .now{background:var(--white);color:var(--ink);padding:3px 10px;border-radius:99px}
+.tool .stack{font-family:var(--mono);font-size:11px;color:#8E8E8E}
+.tool.wide{grid-column:1 / -1}
+@media (max-width:760px){.tools{grid-template-columns:1fr}}
+
+/* recognition */
+.recog{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.clients{display:flex;flex-wrap:wrap;gap:8px}
+.clients .pill{font-size:13px;padding:7px 14px}
+.award{display:flex;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.award:first-child{border-top:1px solid var(--line)}
+.award span:last-child{color:var(--grey);font-size:13px}
+.edu{font-size:13px;color:var(--grey);margin-top:20px}
+@media (max-width:760px){.recog{grid-template-columns:1fr}}
+
+/* cta + footer */
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;margin-bottom:6px}
+.cta{text-align:center;padding-block:clamp(80px,10vw,128px);display:grid;gap:14px;justify-items:center}
+.cta h2{font-size:clamp(30px,4vw,46px);line-height:1.1;max-width:20ch}
+.cta p{color:var(--grey);font-size:15px;max-width:46ch}
+footer.foot{background:var(--ink);color:var(--white);border-radius:20px 20px 0 0;padding:clamp(28px,4vw,44px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot nav{display:flex;gap:8px;flex-wrap:wrap}
+.foot nav a{font-size:12px;text-decoration:none;border:1px solid #444;border-radius:99px;padding:5px 12px}
+.foot nav a:hover{border-color:var(--white)}
+.contact{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.email{font-size:clamp(20px,3.4vw,40px);font-weight:300;letter-spacing:-.03em;user-select:all;word-break:break-all}
+.copy{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--white);border:1px solid #555;border-radius:99px;padding:6px 12px;cursor:pointer}
+.copy:hover{border-color:var(--white)}
+
+/* case study pages */
+.case-view{padding-bottom:clamp(64px,8vw,104px)}
+.cs-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+.cs-top .left{display:flex;align-items:center;gap:24px}
+.back{font-size:13px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.back:hover{color:var(--grey)}
+.cs-head{padding-block:clamp(32px,6vw,72px) clamp(28px,4vw,44px);display:grid;gap:18px}
+.cs-head h1{font-size:clamp(48px,8vw,112px);font-weight:200;line-height:.92;letter-spacing:-.045em}
+.cs-lede{font-size:clamp(17px,1.8vw,21px);color:var(--grey);max-width:58ch}
+.cs-media{border-radius:20px;overflow:hidden;background:var(--hero);aspect-ratio:16/9;max-width:100%}
+.cs-media video,.cs-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cs-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:32px;border-top:1px solid var(--line)}
+.cs-meta div{padding:18px 18px 0 0;display:grid;gap:4px;min-width:0}
+.cs-meta span{font-size:12px;color:var(--grey)}
+.cs-meta b{font-weight:400;font-size:15px}
+@media (max-width:760px){.cs-meta{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:12px}}
+.cs-body{display:grid;gap:0;margin-top:clamp(56px,7vw,88px);border-top:1px solid var(--line)}
+.cs-block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;padding-block:32px;border-bottom:1px solid var(--line)}
+.cs-block h2{font-size:22px;letter-spacing:-.01em}
+.cs-block p{font-size:17px;max-width:62ch}
+.cs-block p + p{margin-top:14px}
+.cs-block ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.cs-block ul .pill{font-size:13px;padding:7px 14px}
+@media (max-width:760px){.cs-block{grid-template-columns:1fr;gap:12px}}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#3A3A3A;border-radius:14px;overflow:hidden}
+.kpi{background:var(--ink);padding:26px 22px;display:grid;gap:8px;align-content:start;min-width:0}
+.kpi .v{font-size:clamp(36px,4.4vw,56px);font-weight:200;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.kpi p{font-size:13px;color:#B5B5B5}
+.kpi.wide{grid-column:1 / -1;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.kpi.wide .v{font-size:clamp(24px,3vw,34px)}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.awardlist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#3A3A3A;border-radius:14px;overflow:hidden}
+.awardlist div{background:var(--ink);padding:22px;display:grid;gap:6px}
+.awardlist b{font-weight:300;font-size:26px;letter-spacing:-.02em}
+.awardlist span{font-size:13px;color:#B5B5B5}
+@media (max-width:760px){.awardlist{grid-template-columns:1fr}}
+.cs-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:clamp(56px,7vw,88px)}
+.cs-gallery figure{margin:0;border-radius:14px;overflow:hidden;background:var(--ph);aspect-ratio:16/9;max-width:100%}
+.cs-gallery figure.big{grid-column:1 / -1}
+.cs-gallery figure.tall{aspect-ratio:4/5}
+.cs-gallery img,.cs-gallery video{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:560px){.cs-gallery{grid-template-columns:1fr}}
+.cs-credit{font-size:12px;color:var(--grey);margin-top:14px}
+.cs-next{margin-top:clamp(56px,7vw,88px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px;text-decoration:none}
+.cs-next b{display:block;font-weight:200;font-size:clamp(34px,5vw,64px);letter-spacing:-.04em;line-height:1}
+.cs-next:hover b{color:var(--grey)}
+
+.zones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:clamp(56px,7vw,88px)}
+.zone{display:grid;gap:12px;align-content:start;min-width:0}
+.zone figure{margin:0;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:var(--ph);max-width:100%}
+.zone img{width:100%;height:100%;object-fit:cover;display:block}
+.zone .n{font-family:var(--mono);font-size:12px;color:var(--grey)}
+.zone h3{font-size:22px;letter-spacing:-.01em}
+.zone p{font-size:15px;color:var(--grey)}
+@media (max-width:760px){.zones{grid-template-columns:1fr}.zone figure{aspect-ratio:4/3}}
+.menu{display:grid;gap:0}
+.menu div{display:grid;grid-template-columns:minmax(0,10em) minmax(0,1fr);gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+.menu div:first-child{padding-top:0}
+.menu b{font-weight:500}
+.menu span{color:var(--grey)}
+@media (max-width:560px){.menu div{grid-template-columns:1fr;gap:2px}}
+.kpi-note{font-size:13px;color:#8E8E8E;margin-top:-16px}
+
+
+.film{margin-top:clamp(56px,7vw,88px);display:grid;gap:16px}
+.film .cs-media{background:#1A0404}
+.film video{object-fit:contain;background:#1A0404}
+.film-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--grey)}
+.film-cap b{font-weight:500;color:var(--ink)}
+
+.arch{margin-top:clamp(56px,7vw,88px);background:#000;color:#fff;border-radius:20px;padding:clamp(28px,5vw,64px);display:grid;gap:0}
+.arch .eyebrow{color:#fff;margin-bottom:24px}
+.arch .eyebrow::before{background:#FF1C1C}
+.arch-row{display:grid;grid-template-columns:8em minmax(0,1fr);gap:24px;padding-block:22px;border-top:1px solid #2E2E2E;align-items:baseline}
+.arch-row > span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8E8E8E}
+.arch-row b{font-weight:300;font-size:clamp(24px,3.2vw,40px);letter-spacing:-.03em;line-height:1.1}
+.tenets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.tenets div{display:grid;gap:8px;align-content:start}
+.tenets b{font-size:clamp(18px,1.8vw,22px);font-weight:400;letter-spacing:-.01em;line-height:1.15}
+.tenets span{font-size:13px;color:#8E8E8E}
+@media (max-width:760px){.arch-row{grid-template-columns:1fr;gap:8px}.tenets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.swatches{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.swatch{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--grey)}
+.swatch i{width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:block}
+
+.web{margin-top:clamp(56px,7vw,88px);display:grid;gap:20px}
+.browser{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--ink)}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1C1C1C}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#3F3F3F;display:block}
+.browser .bar span{margin-left:12px;font-family:var(--mono);font-size:11px;color:#9A9A9A}
+.browser video{width:100%;aspect-ratio:3404/1842;display:block;object-fit:cover;max-width:100%}
+.web-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:20px}
+.web-row h2{font-size:clamp(28px,3.4vw,42px);line-height:1.08;margin-top:10px}
+.web-row p{color:var(--grey);font-size:16px;margin-top:14px;max-width:44ch}
+.web-row .arrow-link{display:inline-block;margin-top:18px}
+.phones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px)}
+.phone{border:6px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--ink);aspect-ratio:450/762;max-width:100%}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phones figcaption{font-size:12px;color:var(--grey);margin-top:8px;text-align:center}
+.phones figure{margin:0}
+@media (max-width:760px){.web-row{grid-template-columns:1fr}}
+
+.features{margin-top:clamp(56px,7vw,88px);display:grid;gap:clamp(40px,6vw,72px)}
+.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.feature:nth-child(even) .f-media{order:-1}
+.f-media{border-radius:16px;overflow:hidden;background:var(--soft);aspect-ratio:640/752;max-width:460px;width:100%;justify-self:center}
+.f-media video,.f-media img{width:100%;height:100%;object-fit:cover;display:block}
+.feature h3{font-size:clamp(26px,3vw,36px);line-height:1.08;margin-top:10px}
+.feature p{color:var(--grey);font-size:16px;margin-top:14px;max-width:46ch}
+.feature .stat-inline{margin-top:18px;display:flex;gap:28px;flex-wrap:wrap}
+.feature .stat-inline b{display:block;font-size:30px;font-weight:300;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.feature .stat-inline span{font-size:12px;color:var(--grey)}
+@media (max-width:760px){.feature{grid-template-columns:1fr}.feature:nth-child(even) .f-media{order:0}}
+.quote{margin-top:clamp(56px,7vw,88px);display:grid;gap:18px;max-width:900px}
+.quote blockquote{margin:0;font-size:clamp(24px,3vw,36px);font-weight:300;letter-spacing:-.02em;line-height:1.2}
+.quote cite{font-style:normal;font-size:14px;color:var(--grey)}
+
+.lines{margin-top:clamp(56px,7vw,88px);background:#0F3D1F;color:#fff;border-radius:20px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(24px,5vw,64px);align-items:start}
+.lines .eyebrow{color:#fff}
+.lines .eyebrow::before{background:#B8EC8A}
+.lines h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin-top:10px}
+.lines .intro{color:#B9CDBE;font-size:15px;margin-top:14px;max-width:38ch}
+.lines ul{list-style:none;margin:0;padding:0;display:grid}
+.lines li{padding-block:12px;border-top:1px solid rgba(255,255,255,.14);font-size:clamp(20px,2.4vw,30px);font-weight:300;letter-spacing:-.02em;line-height:1.15}
+.lines li:first-child{border-top:0;padding-top:0}
+.lines li b{font-weight:500;color:#fff}
+.lines li span{color:#B8EC8A}
+@media (max-width:760px){.lines{grid-template-columns:1fr}}
+</style>
+<style>html,body{margin:0}body{-webkit-text-size-adjust:100%}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div id="home-view">
+<div class="wrap">
+  <header class="nav">
+    <div class="left">
+      <a class="logo" href="#top" aria-label="Jon Freshwater, top of page">JF</a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#tools">AI tools</a>
+        <a href="#experience">Experience</a>
+        <a href="Jon_Freshwater_Resume_2026.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </nav>
+    </div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="rail" aria-hidden="true"><span>Client &amp; creative operations</span><i></i><span>2006–now</span></div>
+    <div class="hero-copy">
+      <div class="stats">
+        <div class="stat"><div class="n"><sup>+</sup>20</div><div class="l">Years at AKQA and Studio.One</div></div>
+        <div class="stat"><div class="n">7<sup>×</sup></div><div class="l">Nike &amp; Jordan Brand revenue growth</div></div>
+      </div>
+      <div>
+        <p class="hi">Hello, I'm <b>Jon Freshwater</b>.</p>
+        <h1 class="thesis"><em>I run the business behind great creative,</em> <span>and build the AI that makes it run faster.</span></h1>
+      </div>
+      <a class="scroll arrow-link" href="#about">Scroll down ↓</a>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="about">
+      <div>
+        <h2 id="about-h">About me</h2>
+        <p class="body">Twenty years owning Fortune 500 relationships for Nike and Jordan Brand, IBM, Visa and Google. I lead the teams that make the work, set up the systems that keep it on budget, and build my own tools to take the busywork out.</p>
+      </div>
+      <div class="card">
+        <span class="pill">Head of Client Services · AKQA SF</span>
+        <div class="big">$50M</div>
+        <p>Total portfolio I was responsible for, across 25+ accounts, with a team of 10.</p>
+      </div>
+      <div class="points">
+        <div class="point"><b>+</b><p><strong>$1.5M to $6.75M in one year.</strong> Portfolio growth across IBM, iFIT and others, at a 47% gross margin.</p></div>
+        <div class="point"><b>+</b><p><strong>2,000+ designers</strong> worldwide work from the IBM Watson guidelines my team built.</p></div>
+        <div class="point"><b>+</b><p><strong>Cannes Gold, One Show Gold, Grand Clio, LIA Gold, Andy Gold</strong> for The Last Shot alone.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="head">
+      <div><span class="eyebrow">Selected work</span><h2 id="work-h">Work I led</h2></div>
+      <p>On each of these I owned the client relationship and led the team that did the work: strategy, creative, production and technology.</p>
+    </div>
+    <div class="gallery">
+      <article class="proj">
+        <a class="ph" href="#coreweave" aria-label="Read the CoreWeave case study"><img src="img/cw-card.jpg" alt="CoreWeave billboards reading Powering AI Innovations across Times Square"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">CoreWeave · AKQA · 2025</span><span class="pill">Brand &amp; AI campaign</span></div>
+        <h3>Unlocking AI's full potential</h3>
+        <p>A new brand and an AI-made national campaign, launched around CoreWeave's Nasdaq IPO.</p>
+        <p class="role">Director, Client Services · led the client relationship</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#the-last-shot" aria-label="Read The Last Shot case study"><img src="img/lastshot-card.jpg" alt="A player takes a buzzer-beater on the LED court as a projected crowd watches"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">Jordan Brand · AKQA · 2015</span><span class="pill">Live activation</span></div>
+        <h3>The Last Shot</h3>
+        <p>An interactive LED half-court for Jordan Brand's 30th anniversary at NBA All-Star Weekend. Six major awards, including a Grand Clio.</p>
+        <p class="role">Client Director · led the account and produced the activation</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#sun-day-red" aria-label="Read the Sun Day Red case study"><img src="img/sdr-card.jpg" alt="A golfer walks out of red smoke at dawn, from the Sun Day Red launch film"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">Sun Day Red · AKQA · 2024</span><span class="pill">Brand launch</span></div>
+        <h3>Launching Tiger Woods' new brand</h3>
+        <p>Strategy, identity and launch for Tiger Woods and TaylorMade. Day-one sales beat the forecast for the whole first month.</p>
+        <p class="role">Director, Client Services · led the brand and the launch</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#museum-of-the-unseen" aria-label="Read the Museum of the Unseen case study"><img src="img/munich-card.jpg" alt="A projection-mapped building model glows above a lit floor grid"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">IBM · AKQA · 2019</span><span class="pill">Interactive installation</span></div>
+        <h3>Museum of the Unseen</h3>
+        <p>An interactive museum inside IBM Watson's Munich HQ that makes the building's hidden IoT tech visible.</p>
+        <p class="role">Senior Client Director · led creative, production and launch</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#ibm-watson" aria-label="Read the IBM Watson case study"><img src="img/watson-card.jpg" alt="IBM Watson posters reading AI for smarter business, in a transit display"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">IBM Watson · AKQA</span><span class="pill">Brand system</span></div>
+        <h3>A global identity for IBM Watson</h3>
+        <p>A design language and Brand Experience Guide that 2,000+ designers, marketers and agencies work from.</p>
+        <p class="role">Senior Client Director · led the relationship and delivery team</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#planetary-health-club" aria-label="Read the Planetary Health Club case study"><img src="img/phc-card.jpg" alt="The Planetary Health Club storefront on East 40th Street in New York"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">Planetary Guardians · Studio.One · 2026</span><span class="pill">Experiential</span></div>
+        <h3>Planetary Health Club</h3>
+        <p>A free, satirical health club for all 8.3 billion of us, built for NYC Climate Week.</p>
+        <p class="role">Partner · owned the client and delivery, scope to opening day</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#coral-gardeners" aria-label="Read the Coral Gardeners case study"><img src="img/cg-card.jpg" alt="Coral Gardeners bus shelter poster reading Plant what you preach" ><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">Coral Gardeners · Studio.One · 2026</span><span class="pill">Full rebrand</span></div>
+        <h3>Power to the Gardeners</h3>
+        <p>A ground-up rebrand for the reef restoration movement: new vision, mission, values and identity.</p>
+        <p class="role">Partner · led the engagement and the team</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#nordictrack" aria-label="Read the iFIT and NordicTrack case study"><img src="img/nt-card.jpg" alt="A wall of iFIT and NordicTrack social posts"><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">iFIT × NordicTrack · AKQA</span><span class="pill">Social</span></div>
+        <h3>Social that lifts heavy</h3>
+        <p>One social strategy for two fitness brands across four channels, built on culture, not content.</p>
+        <p class="role">Client Partner · led the account and the social team</p>
+      </article>
+      <article class="proj">
+        <a class="ph" href="#pagerduty" aria-label="Read the PagerDuty case study"><img src="img/pd-card.jpg" alt="A PagerDuty building wrap reading AI is everywhere. Make Sure it works."><b class="go" aria-hidden="true">↗</b></a>
+        <div class="meta"><span class="who">PagerDuty · Studio.One · 2026</span><span class="pill">Brand campaign</span></div>
+        <h3>Make Sure</h3>
+        <p>A brand platform and campaign that moved PagerDuty from on-call tool to the company that keeps things working.</p>
+        <p class="role">Partner · led the engagement, strategy through production</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="tools" aria-labelledby="tools-h">
+    <div class="band">
+      <div>
+        <span class="eyebrow">Tools I built</span>
+        <h2 id="tools-h">I build the AI my teams actually use.</h2>
+      </div>
+      <p class="sub">Mostly with Claude and Claude Code. Each tool took a slow, manual part of agency life and made it fast enough to stop being a bottleneck.</p>
+      <div class="tools">
+        <div class="tool">
+          <h3>SOW and estimate generator</h3>
+          <p>Turns scoping inputs into a client-ready statement of work and costed estimate. Now the team's default for every new scope.</p>
+          <div class="delta"><span class="was">4–6 hours</span><span aria-hidden="true">→</span><span class="now">~10 min</span></div>
+          <span class="stack">Claude skills</span>
+        </div>
+        <div class="tool">
+          <h3>AI site auditor</h3>
+          <p>Reviews a website across 12 categories, from accessibility and performance to user journeys and content.</p>
+          <div class="delta"><span class="was">2–4 days</span><span aria-hidden="true">→</span><span class="now">Minutes</span></div>
+          <span class="stack">Claude · 12-category rubric</span>
+        </div>
+        <div class="tool">
+          <h3>Studio BI dashboard</h3>
+          <p>One view for leadership of revenue and projections, P&amp;L, cash flow, client satisfaction and team status.</p>
+          <span class="stack">Leadership dashboard</span>
+        </div>
+        <div class="tool">
+          <h3>Creative review system</h3>
+          <p>Scores work against the client brief on six criteria and tracks feedback across rounds, before the client sees it.</p>
+          <span class="stack">Claude · six-point brief rubric</span>
+        </div>
+        <div class="tool wide">
+          <span class="pill" style="justify-self:start">Independent project</span>
+          <h3>AI strength-coaching app</h3>
+          <p>A personal coaching app that writes training blocks from logged performance history. Sole product owner; directed the build end to end with Claude Code across 150+ shipped issues.</p>
+          <span class="stack">React · TypeScript · Supabase · Anthropic API · Whisper</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="head">
+      <div><span class="eyebrow">Experience</span><h2 id="exp-h">Twenty years running the business of breakthrough work</h2></div>
+    </div>
+    <div class="exp">
+      <div class="row">
+        <div><h3>Partner · Studio.One</h3><div class="date">2025 – Present</div></div>
+        <p>Run client services, new business and studio operations. Secured $1.5M in new business in under a year; lead a $1.1M portfolio across 10 engagements.</p>
+        <div class="tags"><span class="pill dark">New business</span><span class="pill">AI ops</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Director, Client Services · AKQA SF</h3><div class="date">2023 – 2025 · Exec team</div></div>
+        <p>Department head for Client Services, responsible for a $50M portfolio across 25+ accounts. Clients included CoreWeave, Replit, IBM and D-Wave. Led a team of 10.</p>
+        <div class="tags"><span class="pill">Leadership</span><span class="pill">Brand</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Client Partner · AKQA SF</h3><div class="date">2021 – 2023</div></div>
+        <p>Led a 30-person team and an $8M portfolio across IBM, iFIT, NordicTrack, SentinelOne, Culligan and Enphase. Grew it from $1.5M to $6.75M in a year.</p>
+        <div class="tags"><span class="pill">Growth</span><span class="pill">P&amp;L</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Senior Client Director · AKQA SF</h3><div class="date">2017 – 2021</div></div>
+        <p>Delivery for IBM, the World Food Programme, Novo and The Weather Channel, with budgets over $6M.</p>
+        <div class="tags"><span class="pill">Brand systems</span><span class="pill">Production</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Client Director · AKQA SF</h3><div class="date">2014 – 2017</div></div>
+        <p>Activations, launches and campaigns for Nike, Jordan Brand and Google. Grew Nike and Jordan Brand from $1M to $7M a year.</p>
+        <div class="tags"><span class="pill">Accounts</span><span class="pill">Activation</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Account Supervisor · AKQA SF</h3><div class="date">2011 – 2014</div></div>
+        <p>Integrated campaigns for Visa Prepaid and Visa Signature, with brand tracking studies tying creative to affinity and awareness.</p>
+        <div class="tags"><span class="pill">Payments</span><span class="pill">Research</span></div>
+      </div>
+      <div class="row">
+        <div><h3>Account Executive – Senior Account Manager · AKQA London</h3><div class="date">2006 – 2011</div></div>
+        <p>Global campaigns and platforms for Unilever, Xbox, Heineken and VW, including Heineken.com across 70+ markets.</p>
+        <div class="tags"><span class="pill">Global</span><span class="pill">Platforms</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="rec-h">
+    <div class="head">
+      <div><span class="eyebrow">Recognition</span><h2 id="rec-h">Clients and awards</h2></div>
+    </div>
+    <div class="recog">
+      <div>
+        <div class="clients">
+          <span class="pill">Nike</span><span class="pill">Jordan Brand</span><span class="pill">Google</span><span class="pill">IBM</span><span class="pill">Visa</span><span class="pill">CoreWeave</span><span class="pill">GoFundMe</span><span class="pill">Sun Day Red</span><span class="pill">Lionsgate</span><span class="pill">PagerDuty</span><span class="pill">SentinelOne</span><span class="pill">NordicTrack</span><span class="pill">Heineken</span><span class="pill">Xbox</span><span class="pill">Unilever</span><span class="pill">Virgin</span>
+        </div>
+        <p class="edu">BA (First Class), Design Management, Surrey Institute of Art and Design.</p>
+      </div>
+      <div>
+        <div class="award"><span>Cannes Lions</span><span>Gold · The Last Shot</span></div>
+        <div class="award"><span>The One Show</span><span>Gold · The Last Shot</span></div>
+        <div class="award"><span>Clio Awards</span><span>Grand + Gold · The Last Shot</span></div>
+        <div class="award"><span>LIA</span><span>Gold · The Last Shot</span></div>
+        <div class="award"><span>Andy Awards</span><span>Gold · The Last Shot</span></div>
+        <div class="award"><span>German Design Award</span><span>Museum of the Unseen · IBM</span></div>
+        <div class="award"><span>FWA</span><span>Site of the Day · IBM Watson Health</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <img class="avatar" src="img/avatar.jpg" alt="Jon Freshwater" width="96" height="96">
+    <span class="eyebrow">Contact</span>
+    <h2>Got a big relationship to grow? Let's talk.</h2>
+    <p>I'm easiest to reach by email or on LinkedIn.</p>
+    <a class="arrow-link" href="https://www.linkedin.com/in/jon-freshwater/">LinkedIn ↗</a>
+  </div>
+</div>
+
+</div>
+
+<article class="case-view" id="sun-day-red" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">Sun Day Red · AKQA · 2024</span>
+    <h1>A brand new day</h1>
+    <p class="cs-lede">Launching Tiger Woods' own brand, built with TaylorMade around the red shirt he wears on Sundays.</p>
+  </header>
+  <div class="cs-media"><video preload="none" src="media/sdr-hero.mp4" poster="img/sdr-poster.jpg" autoplay muted loop playsinline aria-label="Tiger Woods swinging, from the Sun Day Red launch film"></video></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>Sun Day Red · TaylorMade</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Launched</span><b>February 2024</b></div>
+    <div><span>My role</span><b>Director, Client Services</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>After decades at the top of golf, Tiger Woods wanted a brand that was his own. The job was to introduce Sun Day Red to a global audience and turn the buzz around the launch into demand on day one.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>Every golf fan knows Tiger's Sunday red, and every competitor feared it. So we built the brand on it: the red shirt as a mindset, standing for his work ethic and his obsession with winning.</p>
+        <p>The name nods to Tiger's rule of threes, and red runs through the identity, the product and the films.</p>
+      </div>
+    </div>
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Brand strategy</li><li class="pill">Identity &amp; guidelines</li><li class="pill">Launch film</li><li class="pill">Follow-on films</li><li class="pill">Website with early access</li><li class="pill">Social channels</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the program for AKQA: owning the relationship with Tiger's team and TaylorMade, and running the strategy, design, film and technology teams through launch.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="sdr-results">
+    <div class="band">
+      <div><span class="eyebrow">Results</span><h2 id="sdr-results">The first 24 hours</h2></div>
+      <div class="kpis">
+        <div class="kpi"><span class="v">5M</span><p>Launch film views</p></div>
+        <div class="kpi"><span class="v">500K</span><p>Website visits</p></div>
+        <div class="kpi"><span class="v">120K</span><p>New Instagram followers</p></div>
+        <div class="kpi"><span class="v">50K</span><p>Email sign-ups, a 10% conversion rate</p></div>
+        <div class="kpi wide"><span class="v">Day-one sales beat the first-month forecast.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/sdr-6.jpg" alt="A golfer walks out of red smoke at dawn" loading="lazy"></figure>
+    <figure><img src="img/sdr-1.jpg" alt="Close-up of Tiger Woods under a Sun Day Red cap" loading="lazy"></figure>
+    <figure><img src="img/sdr-4.jpg" alt="Silhouette of a golfer swinging in an open bay facing the course" loading="lazy"></figure>
+    <figure><img src="img/sdr-3.jpg" alt="A dumbbell press in a dim, misty gym" loading="lazy"></figure>
+    <figure><img src="img/sdr-2.jpg" alt="A lone golfer in a red shirt on a fairway at dusk" loading="lazy"></figure>
+    <figure class="big"><img src="img/sdr-5.jpg" alt="Motion-blurred close-up of Tiger Woods in a Sun Day Red cap" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Images and film: AKQA for Sun Day Red. <a href="https://www.akqa.com/work/sun-day-red/a-brand-new-day/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#the-last-shot"><span><span class="eyebrow">Next project</span><b>The Last Shot</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="the-last-shot" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">Jordan Brand · AKQA · 2015</span>
+    <h1>The Last Shot</h1>
+    <p class="cs-lede">An LED half-court that put fans inside three of Michael Jordan's defining moments, for Jordan Brand's 30th anniversary.</p>
+  </header>
+  <div class="cs-media"><img src="img/lastshot-3.jpg" alt="A player takes a buzzer-beater on the LED court as a projected crowd watches"></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>Jordan Brand · Nike</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Launched</span><b>NBA All-Star, NYC · 2015</b></div>
+    <div><span>My role</span><b>Client Director</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>Celebrate 30 years of Jordan Brand at NBA All-Star Weekend in New York, in a way fans would remember and want to share.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>Let people take the shot themselves. We built an interactive LED half-court that transformed around each player, restaging Michael Jordan's iconic game-winners with historic NBA and NCAA court designs and era-true crowds.</p>
+        <p>The event featured DJ Khaled, Chris Paul and Russell Westbrook, and the court went on to tour Paris, Shanghai and Dubai.</p>
+      </div>
+    </div>
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Interactive LED court</li><li class="pill">Real-time graphics</li><li class="pill">Era-specific crowds</li><li class="pill">Live event</li><li class="pill">Global tour</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the Jordan Brand account for AKQA and produced the activation through to the live event.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="ls-awards">
+    <div class="band">
+      <div><span class="eyebrow">Recognition</span><h2 id="ls-awards">Six major awards</h2></div>
+      <div class="awardlist">
+        <div><b>Cannes Lions Gold</b><span>Branded Spatial Installation &amp; Experience</span></div>
+        <div><b>One Show Gold</b><span>Responsive Environments</span></div>
+        <div><b>Grand Clio</b><span>Experiential Events</span></div>
+        <div><b>Clio Gold</b><span>Experiential Events</span></div>
+        <div><b>LIA Gold</b><span>Brand Experience</span></div>
+        <div><b>Andy Gold</b><span>Creative Technology</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/lastshot-4.jpg" alt="A player drives past a defender in a 30th-anniversary Jordan jersey on the LED court" loading="lazy"></figure>
+    <figure><img src="img/lastshot-2.jpg" alt="The court shows three Jordan moments: the first shot, the last shot and the next shot" loading="lazy"></figure>
+    <figure><img src="img/lastshot-1.jpg" alt="A player dribbles toward a projected crowd of photographers" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Images: AKQA for Jordan Brand. <a href="https://www.akqa.com/work/jordan/the-last-shot/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#museum-of-the-unseen"><span><span class="eyebrow">Next project</span><b>Museum of the Unseen</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="museum-of-the-unseen" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">IBM · AKQA · 2019</span>
+    <h1>Museum of the Unseen</h1>
+    <p class="cs-lede">An interactive museum inside IBM Watson's Munich headquarters that shows visiting leaders the Internet of Things technology hidden in the building around them.</p>
+  </header>
+  <div class="cs-media"><img src="img/munich-1.jpg" alt="A projection-mapped building model shows live sensor data above an illuminated floor"></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>IBM Watson IoT</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Location</span><b>IBM HQ, Munich</b></div>
+    <div><span>My role</span><b>Senior Client Director</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>IBM's Munich headquarters is a smart building, packed with IoT technology that nobody can see. The brief was to reveal it to the industry leaders who visit, and show them what IoT could do for their own businesses.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <p>A museum for things you can't see. Each exhibit makes an invisible system visible, so visitors experience how the building senses and responds to them instead of just hearing about it.</p>
+    </div>
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Building model with live sensor data</li><li class="pill">Smart-object display case</li><li class="pill">Interactive projection table</li><li class="pill">Client story films</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the project for AKQA: directing the creative, overseeing production with local developers in Munich, and managing the launch.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="mu-impact">
+    <div class="band">
+      <div><span class="eyebrow">Impact</span><h2 id="mu-impact">A showroom that works every day</h2></div>
+      <div class="kpis">
+        <div class="kpi" style="grid-column:span 2"><span class="v">Hundreds</span><p>Industry leaders experience it every day</p></div>
+        <div class="kpi" style="grid-column:span 2"><span class="v">Winner</span><p>German Design Award</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure><img src="img/munich-2.jpg" alt="Nine white smart objects on a backlit display shelf" loading="lazy"></figure>
+    <figure><img src="img/munich-3.jpg" alt="An interactive table projects rings of bottles around a physical can" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Images: AKQA for IBM. <a href="https://www.akqa.com/work/ibm/museum-of-the-unseen/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#ibm-watson"><span><span class="eyebrow">Next project</span><b>IBM Watson</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="ibm-watson" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">IBM Watson · AKQA</span>
+    <h1>Brand identity evolution</h1>
+    <p class="cs-lede">A global design language for IBM Watson that explains AI simply, and a Brand Experience Guide that puts it in the hands of 2,000+ designers, marketers and agencies.</p>
+  </header>
+  <div class="cs-media"><video preload="none" src="media/watson-design.mp4" poster="img/watson-design-poster.jpg" autoplay muted loop playsinline aria-label="The Watson design system applied to posters, type and illustration"></video></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>IBM Watson</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Scope</span><b>Identity, guidelines, brand tool</b></div>
+    <div><span>My role</span><b>Senior Client Director</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>Watson was famous, but it didn't speak with one voice. Teams around the world were explaining complex AI in different ways, and the brand looked different everywhere it showed up.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The insight</h2>
+      <p>Simplicity and consistency build connection. Explaining AI takes exceptional communication, so the system had to make complex ideas feel clear.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <p>Give abstract AI concepts a visual language: data shown as dots, intelligence shown as color. Built on IBM's existing design foundation, one system now runs across data visualization, motion, photography, product interfaces, illustration and print.</p>
+    </div>
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Design language</li><li class="pill">Visual system</li><li class="pill">Brand guidelines &amp; assets</li><li class="pill">Brand Experience Guide</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the relationship with IBM and the AKQA team that built the system and the guide.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="wa-impact">
+    <div class="band">
+      <div><span class="eyebrow">Impact</span><h2 id="wa-impact">A system that scaled across IBM</h2></div>
+      <div class="kpis">
+        <div class="kpi" style="grid-column:span 2"><span class="v">2,000+</span><p>Designers, marketers and agencies working from the guide</p></div>
+        <div class="kpi" style="grid-column:span 2"><span class="v">4</span><p>More IBM brand guides built on the same model: IBM Brand Center, IBM Cloud, IBM Developer and IBM Red Hat Synergy</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure><video preload="none" src="media/watson-hero.mp4" poster="img/watson-ring-poster.jpg" autoplay muted loop playsinline aria-label="The Watson mark animating as orbiting rings"></video></figure>
+    <figure><video preload="none" src="media/watson-experience.mp4" poster="img/watson-exp-poster.jpg" autoplay muted loop playsinline aria-label="The Watson brand applied in physical spaces and on screens"></video></figure>
+  </div>
+  <p class="cs-credit">Film: AKQA for IBM Watson. <a href="https://www.akqa.com/work/ibm-watson/brand-identity-evolution/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#planetary-health-club"><span><span class="eyebrow">Next project</span><b>Planetary Health Club</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="planetary-health-club" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">Planetary Guardians · Studio.One · NYC Climate Week 2026</span>
+    <h1>Planetary Health Club</h1>
+    <p class="cs-lede">Health clubs are for the few. We opened one for all 8.3 billion of us: a free, satirical wellness club on East 40th Street showing how closely the planet's health and our own are tied together.</p>
+  </header>
+  <div class="cs-media"><img src="img/phc-exterior.jpg" alt="The Planetary Health Club storefront, with window lettering reading You'll see results. Whether you like it or not."></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>Planetary Guardians</b></div>
+    <div><span>Agency</span><b>Studio.One</b></div>
+    <div><span>When</span><b>September 21–22, 2026</b></div>
+    <div><span>My role</span><b>Partner</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>New York is full of luxury health clubs selling botox, cryotherapy and treatments most people can't afford. We borrowed the format and flipped it. The Planetary Health Club was free, open to everyone, and every "treatment" pointed back to the health of the planet.</p>
+        <p>The joke lands first. The science follows.</p>
+      </div>
+    </div>
+    <div class="cs-block">
+      <h2>The staff</h2>
+      <p>Brand ambassadors in custom scrubs carrying the Planetary Health Check symbol guided visitors through the club. Subject matter experts in custom lab coats explained the science behind every message.</p>
+    </div>
+  </div>
+
+  <div class="zones">
+    <div class="zone">
+      <figure><img src="img/phc-juicebar.jpg" alt="The juice bar counter under a poster asking Is the juice worth the global squeeze?" loading="lazy"></figure>
+      <span class="n">Zone 01</span>
+      <h3>Toxic Positivity Juice Bar</h3>
+      <p>Visitors arrived at a juice bar selling hidden environmental risks as wellness products.</p>
+    </div>
+    <div class="zone">
+      <figure><img src="img/phc-sauna.jpg" alt="A red-lit screen reading Welcome to the Sauna of Truth" loading="lazy"></figure>
+      <span class="n">Zone 02</span>
+      <h3>Sauna of Truth</h3>
+      <p>A dark, red-lit room kept uncomfortably warm, with a 60-second film. Sixty seconds, because every minute someone dies from heat-related causes.</p>
+    </div>
+    <div class="zone">
+      <figure><img src="img/phc-ipads.jpg" alt="iPad stations showing the Planetary Health Check 2026 and Climate TRACE data" loading="lazy"></figure>
+      <span class="n">Zone 03</span>
+      <h3>Treatment Center</h3>
+      <p>iPad stations with the remedies: the Planetary Health Check 2026, live Climate TRACE pollution data and the partners doing the work. It ended with a letter to the UN.</p>
+    </div>
+  </div>
+
+    
+
+  <section class="film" aria-labelledby="film-h">
+    <div class="cs-media"><video src="media/phc-sauna-film.mp4" poster="img/phc-sauna-poster.jpg" controls playsinline preload="none" aria-label="The Sauna of Truth film"></video></div>
+    <div class="film-cap"><span id="film-h"><b>The Sauna of Truth</b> · the film that played in Zone 02. Turn the sound on.</span><span>1:29</span></div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The menu</h2>
+      <div class="menu">
+        <div><b>Forever Formula</b><span>Packed with PFAS, for that everlasting effect.</span></div>
+        <div><b>VitaMinimizer</b><span>Made with zero pollinator-dependent produce. 100% bee-free.</span></div>
+        <div><b>Protox Water</b><span>Comes with a hint of waste: fertilizer run-off, nitrates and phosphorus.</span></div>
+      </div>
+    </div>
+    <div class="cs-block">
+      <h2>The final station</h2>
+      <p>Visitors signed Planetary Guardians' letter to the Presidents of the UN Security Council and General Assembly, asking for an annual Planetary Science and Security briefing and for nations to appoint Chief Planetary Scientists.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The take-home</h2>
+      <p>Every guest left with a Planetary Treatment Regimen printed on seed paper, pointing them to the Planetary Health Check, the Renewable Freedom report and the partners. Once read, it goes back in the ground and grows pollinator-friendly plants.</p>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I owned the Planetary Guardians relationship for Studio.One and ran delivery from scope to opening day.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="phc-results">
+    <div class="band">
+      <div><span class="eyebrow">Results</span><h2 id="phc-results">Two days, 88 names headed to the UN</h2></div>
+      <div class="kpis">
+        <div class="kpi"><span class="v">88</span><p>Public signatures on the UN letter</p></div>
+        <div class="kpi"><span class="v">19</span><p>Organizations represented, from Virgin Unite to Johns Hopkins</p></div>
+        <div class="kpi"><span class="v">10</span><p>Countries, from the US to French Polynesia</p></div>
+        <div class="kpi"><span class="v">120+</span><p>Scans of the Planetary Health Check 2026 report</p></div>
+      </div>
+      <p class="kpi-note">Source: signing-station export and QR scan data. Country and organization were optional, so both are floors.</p>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/phc-trio.jpg" alt="Forever Formula, Protox Water and VitaMinimizer bottles" loading="lazy"></figure>
+    <figure><img src="img/phc-vita-wall.jpg" alt="VitaMinimizer poster wall reading 100% bee-free above the juice bar tables" loading="lazy"></figure>
+    <figure><img src="img/phc-forever-wall.jpg" alt="Forever Formula poster wall reading These results don't quit, behind a bed of wildflowers" loading="lazy"></figure>
+    <figure><img src="img/phc-sign.jpg" alt="A sidewalk sign reading Sauna of Truth. It's time to feel the facts" loading="lazy"></figure>
+    <figure><img src="img/phc-seedpaper.jpg" alt="The Planetary Treatment Regimen card printed on seed paper" loading="lazy"></figure>
+    <figure><img src="img/phc-protox.jpg" alt="Two Protox Water bottles in front of juice posters and wildflowers" loading="lazy"></figure>
+    <figure><img src="img/phc-five.jpg" alt="A row of Planetary Health Club juice bottles led by Forever Formula" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Photography: Jon Freshwater.</p>
+
+  <a class="cs-next" href="#coral-gardeners"><span><span class="eyebrow">Next project</span><b>Coral Gardeners</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="coral-gardeners" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">Coral Gardeners · Studio.One · 2026</span>
+    <h1>Power to the Gardeners</h1>
+    <p class="cs-lede">A ground-up rebrand for Coral Gardeners, the reef restoration movement started by French Polynesian island kids. New vision, mission and values, a new identity, and a reset for the organization's next chapter.</p>
+  </header>
+  <div class="cs-media"><img src="img/cg-screen.jpg" alt="A screen in a gallery shows a diver in the water under the words Power to the Gardeners"></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>Coral Gardeners</b></div>
+    <div><span>Agency</span><b>Studio.One</b></div>
+    <div><span>Scope</span><b>Strategy, identity, guidelines, web</b></div>
+    <div><span>My role</span><b>Partner</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>Coral Gardeners started in 2017 when a group of island kids watched their home reef dying and decided to act. It had grown into an organization with a global following, labs and branches across the Pacific, but its brand still looked and sounded like the early days. The job was to define what the organization stands for now, and build a brand that could carry it into a new chapter.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>Conservation is usually told as doom and gloom, led from boardrooms. Coral Gardeners is the opposite: surf bums, fish nerds, scientists and island kids, growing the reef back by hand.</p>
+        <p>So we built the brand on that: Power to the Gardeners. A rallying cry that says the solutions are in people's hands, and an invitation for anyone to become a gardener.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="arch" aria-labelledby="cg-arch">
+    <span class="eyebrow" id="cg-arch">Brand foundation</span>
+    <div class="arch-row"><span>Vision</span><b>A world revived. From the reef up.</b></div>
+    <div class="arch-row"><span>Mission</span><b>Give people the power to garden the world back to life.</b></div>
+    <div class="arch-row"><span>Platform</span><b>Power to the Gardeners.</b></div>
+    <div class="arch-row"><span>Tenets</span>
+      <div class="tenets">
+        <div><b>Rebellious Together</b><span>Bold · Raw · Confident</span></div>
+        <div><b>Rigorously Obsessed</b><span>Passionate · Purpose-driven · Expert</span></div>
+        <div><b>Infectious Optimists</b><span>Relatable · Vibrant · Inviting</span></div>
+        <div><b>Wild Makers</b><span>Progressive · Imaginative · Experimental</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="film" aria-labelledby="cg-film-h">
+    <div class="cs-media"><video src="media/cg-film.mp4" poster="img/cg-film-poster.jpg" controls playsinline preload="none" aria-label="Power to the Gardeners brand film"></video></div>
+    <div class="film-cap"><span id="cg-film-h"><b>Power to the Gardeners</b> · the brand film. Concept and script by Studio.One.</span><span>1:07</span></div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The voice</h2>
+      <p>Punchy, inspiring, grounded and open. No guilt trips and no jargon, just lines a gardener would actually say: <em>Plant what you preach. Beat the odds, coral by coral. Grow it all back.</em></p>
+    </div>
+    <div class="cs-block">
+      <h2>The identity</h2>
+      <div>
+        <p>The new symbol keeps the legacy coral logo but rebuilds it entirely from overlapping circles, so a coral structure emerges from a network of connected parts: the gardeners. The palette is deliberately restrained. Black and white let the ocean photography lead, with Rally Red for urgency and Pelagic Blue for depth.</p>
+        <div class="swatches" aria-label="Brand palette">
+          <span class="swatch"><i style="background:#FF1C1C"></i>Rally Red</span>
+          <span class="swatch"><i style="background:#081FED"></i>Pelagic Blue</span>
+          <span class="swatch"><i style="background:#000"></i>Black</span>
+          <span class="swatch"><i style="background:#fff"></i>White</span>
+        </div>
+      </div>
+    </div>
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Vision, mission &amp; values</li><li class="pill">Brand platform &amp; tagline</li><li class="pill">Tone of voice &amp; manifesto</li><li class="pill">Brand film concept &amp; script</li><li class="pill">Symbol &amp; wordmark</li><li class="pill">Design system</li><li class="pill">114-page brand guidelines</li><li class="pill">Website</li><li class="pill">Social &amp; motion templates</li><li class="pill">Merch</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the engagement for Studio.One, from the strategy work that reset the organization's foundation through the identity, guidelines and website.</p>
+    </div>
+  </div>
+
+    <section class="web" aria-labelledby="cg-web-h">
+    <div class="browser">
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>coralgardeners.org</span></div>
+      <video preload="none" src="media/cg-web-desktop.mp4" poster="img/cg-web-desktop.jpg" autoplay muted loop playsinline aria-label="Scrolling the Coral Gardeners homepage on desktop"></video>
+    </div>
+    <div class="web-row">
+      <div>
+        <span class="eyebrow">The website</span>
+        <h2 id="cg-web-h">A new home for the movement</h2>
+        <p>We redesigned coralgardeners.org around the new platform. The homepage opens on the brand's own challenge, "The world will tell you it's too far gone," and every path leads to one action: adopt a coral and follow it back to the reef.</p>
+        <a class="arrow-link" href="https://coralgardeners.org">Visit coralgardeners.org ↗</a>
+      </div>
+      <div class="phones">
+        <figure><div class="phone"><video preload="none" src="media/cg-web-mobile-home.mp4" poster="img/cg-web-mobile-home.jpg" autoplay muted loop playsinline aria-label="The Coral Gardeners homepage on a phone"></video></div><figcaption>Homepage</figcaption></figure>
+        <figure><div class="phone"><video preload="none" src="media/cg-web-mobile-adopt.mp4" poster="img/cg-web-mobile-adopt.jpg" autoplay muted loop playsinline aria-label="The Adopt a Coral flow on a phone"></video></div><figcaption>Adopt a coral</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure class="tall"><img src="img/cg-wildposting.jpg" alt="Coral Gardeners wild posters on a New York street, with a Grow it all back stencil on the sidewalk" loading="lazy"></figure>
+    <figure class="tall"><img src="img/cg-boat.jpg" alt="A black Coral Gardeners boat with the new logo, moored in a turquoise lagoon" loading="lazy"></figure>
+    <figure class="big"><img src="img/cg-billboard.jpg" alt="Billboard at dusk reading Beat the odds. Coral by coral." loading="lazy"></figure>
+    <figure><img src="img/cg-symbol.jpg" alt="The Coral Gardeners symbol and its construction from circles" loading="lazy"></figure>
+    <figure><img src="img/cg-polyp.jpg" alt="The polyp pattern in Rally Red and Pelagic Blue" loading="lazy"></figure>
+    <figure><img src="img/cg-shelter.jpg" alt="Bus shelter poster reading Plant what you preach" loading="lazy"></figure>
+    <figure><img src="img/cg-phone.jpg" alt="The Coral Gardeners Instagram profile in the new identity" loading="lazy"></figure>
+    <figure><img src="img/cg-hat.jpg" alt="A white bucket hat with the Coral Gardeners wordmark" loading="lazy"></figure>
+    <figure class="big"><img src="img/cg-vision.jpg" alt="Brand guidelines page with the vision: A world revived. From the reef up." loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Wild posting and boat photographed in use. Billboard, bus shelter and merch images are applications from the brand guidelines.</p>
+
+  <a class="cs-next" href="#coreweave"><span><span class="eyebrow">Next project</span><b>CoreWeave</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="coreweave" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">CoreWeave · AKQA · 2025</span>
+    <h1>Unlocking AI's full potential</h1>
+    <p class="cs-lede">A reimagined brand and a 360° campaign for the AI cloud platform, timed to its Nasdaq IPO, with the campaign imagery and TV spot made using AI.</p>
+  </header>
+  <div class="cs-media"><video preload="none" src="media/cw-header.mp4" poster="img/cw-header-poster.jpg" autoplay muted loop playsinline aria-label="AI-generated campaign imagery for CoreWeave"></video></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>CoreWeave</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Moment</span><b>Nasdaq IPO, 2025</b></div>
+    <div><span>My role</span><b>Director, Client Services</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>CoreWeave builds the cloud that powers AI, which is hard to picture and easy to tune out. Going public put the company in front of a much wider audience, and it needed a brand that could explain why it matters.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The insight</h2>
+      <p>To make people understand how exciting an AI platform can be, you have to humanize it. Show what it makes possible for people, not the servers behind it.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>Prove it with the work itself. We rebuilt the brand foundation and wrote guidelines designed to inform AI models, so the system could generate on-brand assets at scale.</p>
+        <p>The campaign's image library was made entirely with AI, and the national TV spot was produced with AI video through WPP's Creative Portal and Google's Veo 2.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="film" aria-labelledby="cw-guides-h">
+    <div class="cs-media"><video preload="none" src="media/cw-guidelines.mp4" poster="img/cw-guidelines-poster.jpg" autoplay muted loop playsinline aria-label="The CoreWeave brand guidelines"></video></div>
+    <div class="film-cap"><span id="cw-guides-h"><b>Brand guidelines</b> · built to brief people and AI models alike</span></div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Brand foundation</li><li class="pill">Guidelines for AI models</li><li class="pill">AI-generated image library</li><li class="pill">National TV spot</li><li class="pill">Times Square takeover</li><li class="pill">Branded vehicles</li><li class="pill">Website landing page</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the CoreWeave relationship for AKQA as Director, Client Services, and ran the program across brand, campaign and launch.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="cw-results">
+    <div class="band">
+      <div><span class="eyebrow">Results</span><h2 id="cw-results">Seen around the IPO</h2></div>
+      <div class="kpis">
+        <div class="kpi" style="grid-column:span 2"><span class="v">493M</span><p>Impressions</p></div>
+        <div class="kpi"><span class="v">65M</span><p>Video views</p></div>
+        <div class="kpi"><span class="v">260K</span><p>Clicks to site</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="film" aria-labelledby="cw-camp-h">
+    <div class="cs-media"><video preload="none" src="media/cw-campaign.mp4" poster="img/cw-campaign-poster.jpg" autoplay muted loop playsinline aria-label="The CoreWeave takeover in Times Square and branded vehicles"></video></div>
+    <div class="film-cap"><span id="cw-camp-h"><b>Times Square takeover</b> · digital billboards across multiple blocks, plus branded cars</span></div>
+  </section>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/cw-timessq.jpg" alt="CoreWeave billboards reading Powering AI Innovations over a Times Square crosswalk" loading="lazy"></figure>
+    <figure><img src="img/cw-billboards.jpg" alt="Digital billboards reading The cloud platform purpose-built to unleash AI's full potential" loading="lazy"></figure>
+    <figure><img src="img/cw-car.jpg" alt="A car wrapped in CoreWeave blue reading Powering AI Innovations" loading="lazy"></figure>
+    <figure class="big"><img src="img/cw-library.jpg" alt="Twelve images from the AI-generated library: surgeons, labs, data centers, farming, racing" loading="lazy"></figure>
+    <figure class="big"><img src="img/cw-guides.jpg" alt="Pages from the CoreWeave brand guidelines on tablets" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Images and film: AKQA for CoreWeave. <a href="https://www.akqa.com/work/coreweave/unlocking-ais-full-potential/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#nordictrack"><span><span class="eyebrow">Next project</span><b>iFIT × NordicTrack</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="nordictrack" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">iFIT × NordicTrack · AKQA</span>
+    <h1>Social that lifts heavy</h1>
+    <p class="cs-lede">One social strategy for two fitness brands, NordicTrack's equipment and iFIT's training platform, across four channels. Every post treated as a performance.</p>
+  </header>
+  <div class="cs-media"><video preload="none" src="media/nt-header.mp4" poster="img/nt-header-poster.jpg" autoplay muted loop playsinline aria-label="A wall of iFIT and NordicTrack social posts"></video></div>
+  <div class="cs-meta">
+    <div><span>Clients</span><b>iFIT · NordicTrack</b></div>
+    <div><span>Agency</span><b>AKQA San Francisco</b></div>
+    <div><span>Scope</span><b>Social strategy &amp; content</b></div>
+    <div><span>My role</span><b>Client Partner</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>Build one social strategy for two brands with different jobs: NordicTrack sells the equipment, iFIT powers the workouts on it. Each needed its own personality, and every post had to earn its place.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The insight</h2>
+      <p>Fitness isn't a transaction, it's a transformation. People stay for purpose and connection, so the community around these brands needed culture, not just content.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <p>To resonate, you have to move people. Every post was treated as a performance: entertaining, useful and emotional, cut to each platform's rhythm and each brand's voice.</p>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div><span class="eyebrow">The human connection</span><h3>Trainers are the brand</h3><p>iFIT's trainers are the reason people show up. We built original, trainer-led content around their personalities, so the feed felt like a class you wanted to join.</p></div>
+      <div class="f-media"><video preload="none" src="media/nt-trainers.mp4" poster="img/nt-trainers-poster.jpg" autoplay muted loop playsinline aria-label="A carousel of trainer-led iFIT posts"></video></div>
+    </div>
+    <div class="feature">
+      <div><span class="eyebrow">A social remix</span><h3>Campaigns, rebuilt for the feed</h3><p>Brand campaign footage was remixed into platform-native posts, with behind-the-scenes cuts and vertical edits that matched each channel's rhythm.</p></div>
+      <div class="f-media"><video preload="none" src="media/nt-remix.mp4" poster="img/nt-remix-poster.jpg" autoplay muted loop playsinline aria-label="Brand campaign content remixed into social posts"></video></div>
+    </div>
+    <div class="feature">
+      <div><span class="eyebrow">The speed of culture</span><h3>Seven marathons, seven continents, seven days</h3><p>We covered iFIT trainer Ashley Paulson's Great World Race in near real time. Our original TikTok drew 343K views, and a top creator's reaction to it reached 10.5M.</p><div class="stat-inline"><div><b>343K</b><span>Original TikTok views</span></div><div><b>10.5M</b><span>Creator reaction views</span></div></div></div>
+      <div class="f-media"><video preload="none" src="media/nt-race.mp4" poster="img/nt-race-poster.jpg" autoplay muted loop playsinline aria-label="Near-real-time posts from the Great World Race"></video></div>
+    </div>
+    <div class="feature">
+      <div><span class="eyebrow">An epic escape</span><h3>Everest, from the treadmill</h3><p>Social brought iFIT's destination workouts to life, including the Emmy-nominated series Everest: Trek to Basecamp.</p></div>
+      <div class="f-media"><video preload="none" src="media/nt-everest.mp4" poster="img/nt-everest-poster.jpg" autoplay muted loop playsinline aria-label="iFIT destination workout posts including Everest"></video></div>
+    </div>
+    <div class="feature">
+      <div><span class="eyebrow">Launch energy</span><h3>Product launches with a pulse</h3><p>Launch content for NordicTrack's Ultra 1 Treadmill, X24 series and Tour de France indoor bike, made to entertain first and sell second.</p></div>
+      <div class="f-media"><video preload="none" src="media/nt-launch.mp4" poster="img/nt-launch-poster.jpg" autoplay muted loop playsinline aria-label="NordicTrack product launch posts"></video></div>
+    </div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Social strategy for 2 brands</li><li class="pill">Trainer-led original content</li><li class="pill">Campaign remixes</li><li class="pill">Real-time event coverage</li><li class="pill">Influencer partnerships</li><li class="pill">Product launch content</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the iFIT and NordicTrack account for AKQA and the team behind the social program.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="nt-results">
+    <div class="band">
+      <div><span class="eyebrow">Impact</span><h2 id="nt-results">Social that performed</h2></div>
+      <div class="kpis">
+        <div class="kpi"><span class="v">848M</span><p>Impressions</p></div>
+        <div class="kpi"><span class="v">3.8M</span><p>Engagements</p></div>
+        <div class="kpi"><span class="v">2.1M</span><p>Post link clicks</p></div>
+        <div class="kpi"><span class="v">+246%</span><p>TikTok audience growth</p></div>
+        <div class="kpi wide"><span class="v">Instagram engagement rate up 191.4%.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    <blockquote>"From day one, the team jumped in with energy, creativity and a sharp eye for elevating our content, and the results speak for themselves."</blockquote>
+    <cite>Courtney Lake, Director of PR and Social, iFIT</cite>
+  </div>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/nt-still.jpg" alt="NordicTrack posts: an athlete on film, a rower in motion, a spread of Polaroids" loading="lazy"></figure>
+    <figure class="big"><img src="img/nt-everest-still.jpg" alt="An iFIT trainer in the Himalaya with a post noting the Emmy-nominated Everest series" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Images and film: AKQA for iFIT and NordicTrack. <a href="https://www.akqa.com/work/ifitxnordictrack/social-that-lifts-heavy/">Full case study on AKQA.com ↗</a></p>
+
+  <a class="cs-next" href="#pagerduty"><span><span class="eyebrow">Next project</span><b>PagerDuty</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<article class="case-view" id="pagerduty" hidden>
+<div class="wrap">
+  <div class="cs-top">
+    <div class="left"><a class="logo" href="#top" aria-label="Jon Freshwater, home">JF</a><a class="back" href="#work">← All work</a></div>
+    <a class="arrow-link" href="#contact">Get in touch ↗</a>
+  </div>
+  <header class="cs-head">
+    <span class="eyebrow">PagerDuty · Studio.One · 2026</span>
+    <h1>Make Sure</h1>
+    <p class="cs-lede">A new brand platform and campaign for PagerDuty, built for a market where AI is making every system faster, more complex and more likely to break.</p>
+  </header>
+  <div class="cs-media"><img src="img/pd-building.jpg" alt="A PagerDuty building wrap reading AI is everywhere. Make Sure it works."></div>
+  <div class="cs-meta">
+    <div><span>Client</span><b>PagerDuty</b></div>
+    <div><span>Agency</span><b>Studio.One</b></div>
+    <div><span>Channels</span><b>CTV, OOH, digital, social</b></div>
+    <div><span>My role</span><b>Partner</b></div>
+  </div>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>The brief</h2>
+      <p>Almost everyone in IT knows PagerDuty, but the product had outgrown how people saw it. The market still filed it under "on-call," while competitors told bigger stories about observability, automation and AI. The problem wasn't awareness. It was relevance.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The insight</h2>
+      <p>AI is accelerating complexity, creating as much risk as capability. In that world, PagerDuty's oldest strength becomes its most valuable one: trust that systems will work when it matters.</p>
+    </div>
+    <div class="cs-block">
+      <h2>The idea</h2>
+      <div>
+        <p>Make Sure. Two words that say what PagerDuty does and what customers are really buying: confidence. Instead of chasing the AI narrative, the platform extends the trust PagerDuty already owns, from fixing incidents to preventing them.</p>
+        <p>It's built as a system, not a slogan. "Make Sure" leads and the second line flexes for every audience, from executives to developers.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="film" aria-labelledby="pd-spot-h">
+    <div class="cs-media"><video src="media/pd-spot.mp4" poster="img/pd-spot-poster.jpg" controls playsinline preload="none" aria-label="PagerDuty Make Sure TV spot"></video></div>
+    <div class="film-cap"><span id="pd-spot-h"><b>Make Sure</b> · the CTV spot</span><span>0:51</span></div>
+  </section>
+
+  <section class="lines" aria-labelledby="pd-lines-h">
+    <div>
+      <span class="eyebrow">The system</span>
+      <h2 id="pd-lines-h">One line, endless endings</h2>
+      <p class="intro">"Make Sure" stays fixed. The second line changes to fit the channel, the audience and the moment.</p>
+    </div>
+    <ul>
+      <li><b>Make Sure</b> <span>it works.</span></li>
+      <li><b>Make Sure</b> <span>one incident doesn't become ten.</span></li>
+      <li><b>Make Sure</b> <span>small issues don't become big jobs.</span></li>
+      <li><b>Make Sure</b> <span>you catch it before you ship it.</span></li>
+      <li><b>Make Sure</b> <span>progress doesn't create problems.</span></li>
+      <li><b>Make Sure</b> <span>you call your mother.</span></li>
+    </ul>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-block">
+      <h2>What we made</h2>
+      <ul>
+        <li class="pill">Campaign strategy</li><li class="pill">Brand platform &amp; manifesto</li><li class="pill">CTV spot</li><li class="pill">Out-of-home</li><li class="pill">Digital &amp; social</li><li class="pill">Campaign toolkit</li>
+      </ul>
+    </div>
+    <div class="cs-block">
+      <h2>The toolkit</h2>
+      <p>We also built a campaign toolkit so PagerDuty's in-house team could roll "Make Sure" out across every channel themselves, keeping it consistent long after launch.</p>
+    </div>
+    <div class="cs-block">
+      <h2>My role</h2>
+      <p>I led the engagement for Studio.One, from the research and strategy that defined the platform through production of the campaign.</p>
+    </div>
+  </div>
+
+  <div class="cs-gallery">
+    <figure class="big"><img src="img/pd-wide.jpg" alt="A wide screen reading Make Sure. Problems turn into insights." loading="lazy"></figure>
+    <figure><img src="img/pd-matches.jpg" alt="Poster: Make Sure one incident doesn't become ten, with one lit match in a box" loading="lazy"></figure>
+    <figure><img src="img/pd-needle.jpg" alt="Poster: Make Sure small issues don't become big jobs, with a fraying thread" loading="lazy"></figure>
+    <figure class="big"><img src="img/pd-banners.jpg" alt="Four digital banners from the Make Sure campaign" loading="lazy"></figure>
+    <figure class="big"><img src="img/pd-digital.jpg" alt="A Make Sure banner on Wired, and a phone case reading Make Sure you call your mother" loading="lazy"></figure>
+  </div>
+  <p class="cs-credit">Studio.One for PagerDuty.</p>
+
+  <a class="cs-next" href="#sun-day-red"><span><span class="eyebrow">Next project</span><b>Sun Day Red</b></span><span class="arrow-link">View ↗</span></a>
+</div>
+</article>
+
+<div class="wrap">
+  <footer class="foot" id="contact">
+    <nav aria-label="Footer">
+      <a href="#top">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#tools">AI tools</a><a href="#experience">Experience</a>
+    </nav>
+    <div class="contact">
+      <span class="email" id="email">jon.freshwater@gmail.com</span>
+      <button class="copy" type="button" id="copy-email">Copy</button>
+    </div>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var btn = this, el = document.getElementById('email');
+  function done(m){ btn.textContent = m; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+  try { navigator.clipboard.writeText(el.textContent).then(function(){ done('Copied'); }, fallback); } catch(e){ fallback(); }
+});
+
+(function(){
+  var home=document.getElementById('home-view');
+  var cases=[].slice.call(document.querySelectorAll('.case-view'));
+  function route(){
+    var id=(location.hash||'').slice(1);
+    var target=cases.filter(function(c){return c.id===id;})[0];
+    cases.forEach(function(c){
+      var on=c===target; c.hidden=!on;
+      [].forEach.call(c.querySelectorAll('video'),function(v){ try{ var p=(on&&v.hasAttribute('autoplay'))?v.play():v.pause(); if(p&&p.catch)p.catch(function(){}); }catch(e){} });
+    });
+    home.hidden=!!target;
+    if(target){ window.scrollTo(0,0); }
+    else if(id){ var el=document.getElementById(id); if(el){ el.scrollIntoView(); } }
+    else { window.scrollTo(0,0); }
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+
+</body>
+</html>
